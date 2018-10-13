@@ -1,65 +1,31 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[english, russian]{babel}
+\usepackage[english, russian] {babel}
 \usepackage{tikz}
-\usepackage[european,cuteinductors,smartlabels]{circuitikz}
-\title{Практическая работа №2}
-\author{студент Verenev Андрей    }
+\usepackage[european,cuteinductors, smartlabels]{circuitikz}
+\title{Практическая работа 2}
+
+\author{студент Веренев}
+
+% Start the document
 \begin{document}
-\begin{tikzpicture}[scale=0.6]
-\newcommand{\alfa}{60}
-\newcommand{\D}{5}
-\draw[thin,->,>=stealth'] (0,0) -- (5,0) node[below] {$Re$};
-\draw[thin,->,>=stealth'] (0,0) -- (0,6) node[left] {$Im$};
-\draw[red,thick,->,>=stealth'] (0,0) -- ({\D*cos(\alfa)}, {\D*sin(\alfa)}) node[right] {$\vec{x}$};
-\draw[red,thin,dashed] ({\D*cos(\alfa)}, {\D*sin(\alfa)}) -- ({\D*cos(\alfa)}, 0) node[below] {$Re(x)$};
-\draw[red,thin,dashed] ({\D*cos(\alfa)}, {\D*sin(\alfa)}) -- (0, {\D*sin(\alfa)}) node[left] {$Im(x)$};
-\draw[blue,thin,<->] (1.5,0) arc(0:60:1.5) node[midway,right] {$\alpha=60^\circ$};
+
+\begin{tikzpicture} [scale=0.6]
+\newcommand{\alfa } {25}
+\newcommand{\teta } {80}
+\newcommand {\D } {6}
+\newcommand {\V } {10}
+
+\draw[thin,->,>=stealth'] (0,0) -- (9,0) node[below] {$X$};
+\draw[thin,->,>=stealth'] (0,0) -- ({9*cos(\teta) },{9*sin(\teta) }) node[left] {$Y$};
+\draw[thin,red,->,>=stealth'] (0,0) -- ({\D*cos(\alfa) },{\D*sin(\alfa) }) node[at end, above right] {$\vec{x}$};
+\draw[thin,dashed] ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*cos(\alfa) },0)node[at end,below] {$x_1$};
+\draw[thin,dashed]({\D*cos(\alfa) },{\D*sin(\alfa) }) -- (6.41,0) node[at end,below] {$x^1$};
+\draw[thin,dashed]({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*cos(\teta) },{\D*sin(\alfa) }) node[at end,below] {$x^2$};
+\draw[thin,dashed] (0,0) -- ({\V*cos(50) },{\V*sin(-50) });
+\draw[thin,<->] (3,0) arc(0:25:3) node[below,right ] {$\alpha=25^\circ$};
+
+
 \end{tikzpicture}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\end{document} 
+\end{document}
