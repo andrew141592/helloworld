@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\title{Практическая работа №2}
+\author{студент Verenev Андрей    }
+\begin{document}
+\begin{tikzpicture}[scale=0.6]
+\newcommand{\alfa}{60}
+\newcommand{\D}{5}
+\draw[thin,->,>=stealth'] (0,0) -- (5,0) node[below] {$Re$};
+\draw[thin,->,>=stealth'] (0,0) -- (0,6) node[left] {$Im$};
+\draw[red,thick,->,>=stealth'] (0,0) -- ({\D*cos(\alfa)}, {\D*sin(\alfa)}) node[right] {$\vec{x}$};
+\draw[red,thin,dashed] ({\D*cos(\alfa)}, {\D*sin(\alfa)}) -- ({\D*cos(\alfa)}, 0) node[below] {$Re(x)$};
+\draw[red,thin,dashed] ({\D*cos(\alfa)}, {\D*sin(\alfa)}) -- (0, {\D*sin(\alfa)}) node[left] {$Im(x)$};
+\draw[blue,thin,<->] (1.5,0) arc(0:60:1.5) node[midway,right] {$\alpha=60^\circ$};
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
