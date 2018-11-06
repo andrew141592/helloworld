@@ -4,7 +4,7 @@
 \usepackage[english, russian] {babel}
 \usepackage{tikz}
 \usepackage[european,cuteinductors, smartlabels]{circuitikz}
-\usepackage{mathtext} 
+\usepackage{mathtext}
 
 \begin{document}
 \section{Практическая работа №2}
@@ -24,11 +24,11 @@
 
 \draw[thin,dashed] ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*cos(\alfa) },0) node[at end,below] {$x_1$};
 
-\draw[thin,dashed] ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*sin(56) },0) node[at end,below] {$x^3$};
+\draw[thin,dashed] ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*sin(56) },0) node[at end,below] {$x_3$};
 
 \draw[thin,dashed]({\D*cos(\alfa)},{\D*sin(\alfa)}) -- ({sin(\alfa)*(\D)*cos(\teta)},{6*sin(\alfa)}) node[at end,above left] {$x^2$};
 
-\draw[thin,dashed]({\D*cos(\alfa)},{\D*sin(\alfa)}) -- ({0},{(\D)*sin(\teta)}) node[at end,above left] {$x^4$};
+\draw[thin,dashed]({\D*cos(\alfa)},{\D*sin(\alfa)}) -- ({0},{(\D)*sin(33)}) node[at end,above left] {$x^4$};
 
 \draw[<->,purple] (2.5,0) arc(0:\alfa:2.5) node [below right] {$\alpha=25^\circ$};
 
