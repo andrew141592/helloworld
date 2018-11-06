@@ -1,38 +1,43 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[T2A]{fontenc}
-\usepackage[cp1251]{inputenc}
-\usepackage[english, russian] {babel}
+\documentclass[a4paper,12pt]{scrartcl}
+\usepackage{mathtext}                    
+\usepackage{cmap}                        
+\usepackage[cp1251]{inputenc}            
+\usepackage[english, russian]{babel}     
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry} 
 \usepackage{tikz}
-\usepackage[european,cuteinductors, smartlabels]{circuitikz}
-\usepackage{mathtext}
-
+\title{Практическая работа №2}
+\author{Студент группы 8871 Веренев А.А.}
 \begin{document}
 \section{Практическая работа №2}
-\title{Практическая работа 2}
-\author{студент Веренев А.А.}
-\begin{tikzpicture} [scale=1]
-\newcommand{\alfa } {25}
-\newcommand{\teta } {80}
-\newcommand {\D } {6}
-\newcommand {\V } {6}
+\subsection{Основное задание}
+Построение ковариантной и конравариантной координаты вектора в косоугольной системе координат.
 
-\draw[thin,->,>=stealth'] (0,0) -- (9,0) node[below] {$X$};
-
-\draw[thin,->,>=stealth'] (0,0) -- ({9*cos(\teta) },{9*sin(\teta) }) node[left] {$Y$};
-
-\draw[thin,red,->,>=stealth'] (0,0) -- ({\D*cos(\alfa) },{\D*sin(\alfa) }) node[at end, above right] {$\vec{x}$};
-
-\draw[thin,dashed] ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*cos(\alfa) },0) node[at end,below] {$x_1$};
-
-\draw[thin,dashed] ({\D*cos(\alfa) },{\D*sin(\alfa) }) -- ({\D*sin(56) },0) node[at end,below] {$x_3$};
-
-\draw[thin,dashed]({\D*cos(\alfa)},{\D*sin(\alfa)}) -- ({sin(\alfa)*(\D)*cos(\teta)},{6*sin(\alfa)}) node[at end,above left] {$x^2$};
-
-\draw[thin,dashed]({\D*cos(\alfa)},{\D*sin(\alfa)}) -- ({0},{(\D)*sin(33)}) node[at end,above left] {$x^4$};
-
-\draw[<->,purple] (2.5,0) arc(0:\alfa:2.5) node [below right] {$\alpha=25^\circ$};
-
-\draw[<->,green] (1.5,0) arc(0:\teta:1.5) node [above right] {$\Theta=80^\circ$};
-
+В данной практической работе мне заданы следующие параметры косоугольной системы координат и вектора в ней:
+\begin{enumerate}
+  \item Угол teta $t=80^0$
+  \item Угол alfa $a=25^0$
+\end{enumerate}
+\newcommand{\x}{25}
+\newcommand{\ReYm}{80}
+\begin{tikzpicture}
+\draw(0,0) node [below] {0};
+\draw[thin,->] (0,0) -- ({10*cos(0)},0); 
+\draw[thin,->] (0,0) -- ({10*cos(\ReYm)},{10*sin(\ReYm)}); 
+\draw[red,->] (0,0) -- ({10*cos(\x)},{10*sin(\x)}); 
+\draw({5*cos(\x)},{5*sin(\x)}) node [below] {\rotatebox{\x}{$\vec{x}$}}; 
+\draw[blue,<->]({3*cos(\ReYm)},0) arc (0:80:{3*cos(\ReYm)}); 
+\draw[blue,<->]({4*cos(\x)},0) arc (0:25:{4*cos(\x)}); 
+\draw(5,0.75) node {\rotatebox{280}{$\alpha=20^0$}};
+\draw(1.5,1) node {\rotatebox{300}{$\theta=80^0$}}; 
+\draw[thin,dashed,->] (0,0) -- (0,{10*sin(90)}); 
+\draw[thin,yellow,dashed] ({10*cos(\x)},{10*sin(\x)}) -- (0,{10*sin(\x)}); 
+\draw[yellow] (-0.2,{10*sin(\x)}) node {$x_3$};
+\draw[thin,green,dashed] ({10*cos(\x)},{10*sin(\x)}) -- (0,{10*sin(35)});
+\draw[green] (-0.2,{14*sin(\x)}) node {$x_4$}; 
+\draw[thin,green,dashed] ({10*cos(\x)},{10*sin(\x)}) -- ({10*cos(\x)},0); 
+\draw[green] ({10*cos(\x)},0.3) node [right] {$x_1$};
+\draw[purple,thin,->] (0,0) -- ({10*cos(30)},{-10*sin(30)});
+\draw[thin,orange,dashed] ({10*cos(\x)},0) -- ({10*cos(47)},{-4*sin(100)}); 
+\draw[orange] (7.1,-3.9) node {\rotatebox{330}{$x_2$}};
 \end{tikzpicture}
 \end{document} 
