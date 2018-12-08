@@ -1,0 +1,55 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{xcolor}
+\title{Практическая работа №5}
+\author{Веренев А.А. (8871)}
+\begin{document}
+\maketitle
+\begin{center}
+\begin{flushleft}
+Вариант 16 \\
+Дана функция(ДНФ): (A\wedge B\wedge  \bar C) \vee ( \bar A\wedge  B\wedge D)\vee( \bar C \wedge \bar D)\\
+\end{flushleft}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+№ & A & B & C & D & F_1 & F_2 & F_3  \\
+\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+2 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+3 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+4 & 0 & 1 & 0 & 0 & 0 & 0 & 1\\
+5 & 0 & 1 & 0 & 1 & 0 & 1 & 0\\
+6 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+7 & 0 & 1 & 1 & 1 & 0 & 1 & 0\\
+8 & 1 & 0 & 0 & 0 & 0 & 0 & 1\\
+9 & 1 & 0 & 0 & 1 & 0 & 0 & 0\\
+10 & 1 & 0 & 1 & 0 & 0 & 0 & 0\\
+11 & 1 & 0 & 1 & 1 & 0 & 0 & 0\\
+12 & 1 & 1 & 0 & 0 & 1 & 0 & 1\\
+13 & 1 & 1 & 0 & 1 & 1 & 0 & 0\\
+14 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+15 & 1 & 1 & 1 & 1 & 0 & 0 & 0\\
+\hline
+\end{tabular}
+\caption{Таблица истинности}
+\end{table}
+\end{center}\\
+\begin{flushleft}
+Формулы: \\
+СДНФ: F=(\bar A\wedge \bar B\wedge \bar C\wedge \bar D)\vee(\bar A\wedge \bar B\wedge \bar C\wedge \bar D)\vee(\bar A\wedge \bar B\wedge \bar C\wedge D)\vee(\bar A\wedge B\wedge C\wedge  D)\vee(A\wedge \bar B\wedge \bar C\wedge \bar D)\vee( A\wedge B\wedge \bar C\wedge \bar D)\vee( A\wedge B\wedge \bar C\wedge  D)\\
+СКНФ: F=(A\wedge B\wedge C\wedge \bar D)\vee(A\wedge B\wedge \bar C\wedge D)\vee(A\wedge  B\wedge \bar C\wedge \bar D)\vee( A\wedge \bar B\wedge \bar C\wedge D)\vee(\bar A\wedge B\wedge C\wedge \bar D)\vee(\bar A\wedge B\wedge \bar C\wedge D)\vee(\bar A\wedge B\wedge \bar C\wedge \bar D)\vee(\bar A\wedge \bar B\wedge \bar C\wedge D)\vee(\bar A\wedge \bar B\wedge \bar C\wedge \bar D)\\
+
+\end{flushleft}
+
+\end{tikzpicture}
+
+
+\end{document}
