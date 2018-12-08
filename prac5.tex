@@ -15,12 +15,19 @@
 \begin{scope}[scale=0.5]
 \newcommand{\D}{10}
 \newcommand{\T}{1.3}
-\foreach \f in {0, 10, 20, 30, 40, 50, 60, 70, 80, 90}
-\draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[right] {$\f$};
+\foreach \f in {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90}
+   \draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[right] {$\f$};
 \foreach \f in {100, 110, 120, 130, 140, 150, 160, 170, 180}
-\draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[left] {$\f$};
-\foreach \s in {0, 10, 20, 30, 40, 50, 60, 70, 80, 90}
-\draw[green,->,>=stealth'] ({\D*cos(\s)},{\D*sin(\s)}) --++ ({\T*cos(\s)},{\T*sin(\s)}) node[right] {$\s$};
+  \draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[left] {$\f$};
+\foreach \f in {190, 200, 210, 220, 230, 240,250,260, 270}
+  \draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[left] {$\f$};
+\foreach \f in {280,290,300,310,320,330,340,350,360}
+  \draw[red,->,>=stealth'] (0,0) -- ({\D*cos(\f)},{\D*sin(\f)}) node[right] {$\f$};
+
+
+
+\foreach \s in {0, 15, 30, 45, 60, 75, 90}
+  \draw[purple,->,>=stealth'] ({\D*cos(\s)}, {\D*sin(\s)}) --++ ({\T*cos(180-(\s)},{\T*sin(180-\s}) ;
 	
 \end{scope};	
 \end{tikzpicture}
