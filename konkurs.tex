@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{xcolor}
+\title{Конкурсная работа}
+\author{Веренев Андрей 8871}
+\begin{document}
+\maketitle
+\newcommand{\alfa}{0}
+\newcommand{\tetta}{0}
+
+\begin{tikzpicture}[rotate=\tetta]
+
+\fill[purple] ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({10*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({10*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))});
+\fill[black]({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))})-- ({1*(cos(\alfa)-sin(\alfa))},5,{10*(cos(\alfa)+sin(\alfa))}) -- ({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))});
+
+\draw [rounded corners=3pt,color=white,ball color=red,smooth] ({1*(cos(\alfa)-sin(\alfa))},5,{1*(cos(\alfa)+sin(\alfa))})
+circle (0.5) node {1};
+
+\draw [rounded corners=3pt,color=white,ball color=red,smooth] ({1*(cos(\alfa)-sin(\alfa))},5,{10*(cos(\alfa)+sin(\alfa))})
+circle (0.5) node {2};
+\draw [rounded corners=3pt,color=white,ball color=red,smooth] ({1*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))})
+circle (0.5) node {3};
+\draw [rounded corners=3pt,color=white,ball color=red,smooth] ({1*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))})
+circle (0.5) node {4};
+\draw [rounded corners=3pt,color=white,ball color=red,smooth] ({10*(cos(\alfa)-sin(\alfa))},1,{1*(cos(\alfa)+sin(\alfa))})
+circle (0.5) node {5};
+\draw [rounded corners=3pt,color=white,ball color=red,smooth] ({10*(cos(\alfa)-sin(\alfa))},1,{10*(cos(\alfa)+sin(\alfa))})
+circle (0.5) node {6};
+
+\end{tikzpicture}
+
+\end{document}

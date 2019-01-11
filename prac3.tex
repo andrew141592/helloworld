@@ -1,36 +1,20 @@
-<<<<<<< HEAD
-\documentclass[a4paper,12pt]{article}
+
+\documentclass[a4paper,12pt]{scrartcl}
 \usepackage{mathtext}
-\usepackage[cp1251]{inputenc}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
 \usepackage[english, russian]{babel}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry}
-=======
-\documentclass[a4paper,12pt]{scrartcl}
-\usepackage{mathtext}                   
-\usepackage{cmap}                        
-\usepackage[utf8]{inputenc}            
-\usepackage[english, russian]{babel}     
-\usepackage[left=1cm,right=1cm,top=1cm,bottom=2cm]{geometry} 
->>>>>>> ef632065ff4451ee3fd93d848cb367dec96aa71f
 \usepackage{tikz}
-\title{ГЏГ°Г ГЄГІГЁГ·ГҐГ±ГЄГ Гї Г°Г ГЎГ®ГІГ  В№3}
-\author{Г±ГІГіГ¤ГҐГ­ГІ:Г‚ГҐГ°ГҐГ­ГҐГў ГЂ.ГЂ. ГЈГ°ГіГЇГЇГ» 8871   }
+\title{ЛЯЛЯЛЯЛЯЛЯЛЯЛ}
+\author{ТОПОЛЯ 8871   }
 \begin{document}
 <<<<<<< HEAD
 \section{Практическая работа №3 Построение графиков функций}
     Дан график $х^3-7х+6=0$.Интервал $[-3,3;2,8]$
 =======
-\section{ГЏГ°Г ГЄГІГЁГ·ГҐГ±ГЄГ Гї Г°Г ГЎГ®ГІГ  В№3 ГЏГ®Г±ГІГ°Г®ГҐГ­ГЁГҐ ГЈГ°Г ГґГЁГЄГ®Гў ГґГіГ­ГЄГ¶ГЁГ©}
-    Г„Г Г­ ГЈГ°Г ГґГЁГЄ $Гµ^3-7Гµ+6=0$.Г€Г­ГІГҐГ°ГўГ Г« $[-3,3;2,8]$ 
->>>>>>> ef632065ff4451ee3fd93d848cb367dec96aa71f
-
-ГЏГҐГ°ГўГ®ГҐ ГіГ°Г ГўГ­ГҐГ­ГЁГҐ ГЄГ Г±Г ГІГҐГ«ГјГ­Г®Г© Г¤Г Г­Г­Г®ГЈГ® ГЈГ°Г ГґГЁГЄГ  Гў ГІГ®Г·ГЄГҐ $x_0=0,11$ ГЎГіГ¤ГҐГІ ГЁГ¬ГҐГІГј ГўГЁГ¤ $-6,9637*x+5,997338$.
-
-<<<<<<< HEAD
-Второе уравнения касательной этого графика в точке $ x_0=0,86 $ будет иметь вид $-4,7812*x+4,727888$
-=======
-Г‚ГІГ®Г°Г®ГҐ ГіГ°Г ГўГ­ГҐГ­ГЁГї ГЄГ Г±Г ГІГҐГ«ГјГ­Г®Г© ГЅГІГ®ГЈГ® ГЈГ°Г ГґГЁГЄГ  Гў ГІГ®Г·ГЄГҐ $ x_0=0,95 $ ГЎГіГ¤ГҐГІ ГЁГ¬ГҐГІГј ГўГЁГ¤ $-4,2925*x+4,28525$
->>>>>>> ef632065ff4451ee3fd93d848cb367dec96aa71f
+\section{График функции}
+    
 
 \begin{tikzpicture}
 \begin{scope}[scale=0.3,xscale=8,yscale=1]
@@ -45,9 +29,10 @@
 \draw (\x,0.1) -- (\x,-0.1) node[below] {$\xtext$};
 
 
-\draw[domain=-3.3:2.8, smooth, green] plot ({\x},{((\x)*(\x)*(\x))-(7*(\x))+6});
-\draw[domain=-1:2, smooth, help lines, red] plot ({\x},{(-6.9637*(\x))+5.997338});
-\draw[domain=-1:2, smooth, help lines, blue] plot ({\x},{(-4.7812*(\x))+4.727888});
+\draw[domain=0:1.25, smooth, blue] plot ({\x},{(0.2705*(\x)*(\x)*(\x))+0-(0.4827*(\x))+4});
+\draw[domain=1.25:2, smooth, red] plot ({\x},{(-0.9711*(\x)*(\x)*(\x))+(4.6563*(\x)*(\x))-(6.3031*(\x))+6.4252});
+\draw[domain=2:2.625, smooth,green] plot ({\x},{(0.6741*(\x)*(\x)*(\x))-(5.2149*(\x)*(\x))+(13.4393*(\x))-6.7365});
+\draw[domain=2.625:4.25, smooth, violet] plot ({\x},{(-0.0191*(\x)*(\x)*(\x))+(0.2439*(\x)*(\x))-(0.89*(\x))+5.8017});
 
 \end{scope};
 \end{tikzpicture}
