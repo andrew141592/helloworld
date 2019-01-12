@@ -1,40 +1,35 @@
 \documentclass[russian,utf8,nocolumnxxxi,nocolumnxxxii]{eskdtext}
 \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{pictures/}}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+%\usepackage[english,russian]{babel}
 \usepackage{amssymb,amsmath}
 \usepackage{tikz}
 \usepackage{siunitx}
+\usepackage{nccmath}
+
 \usepackage[american,cuteinductors,smartlabels]{circuitikz}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{error_estimation_otchet.bib}
 \usepackage[]{hyperref}
 \hypersetup{colorlinks=true,}
 \usepackage{textcomp}
+\usepackage{float}
 \newcommand{\No}{\textnumero}
-\ESKDdepartment{Федеральное агенство по побразованю}
-\ESKDcompany{СПбГЭТУ}
-\ESKDtitle{Пояснтельня записка к курсовой работе}
-\ESKDsignature{Вариант N 32}
+\ESKDdepartment{Федеральное агентство по образованию}
+\ESKDcompany{Санкт-Петербургский государственный электротехнический университет "ЛЭТИ"}
+\ESKDtitle{Пояснительная записка к Курсовой работе}
+
+
+\ESKDsignature{Вариант N32}
 \ESKDauthor{Веренёв А.А.}
 \ESKDchecker{Прокшин А.Н.}
 \ESKDdocName{по дисциплине "Информатика"}
-\begin{document}
-\begin{center}
-МИНОБРНАУКИ РОССИИ
-\\САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ
-\\ЭЛЕКТРОТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ
-\\«ЛЭТИ» ИМ. В.И. УЛЬЯНОВА (ЛЕНИНА)
-\\Кафедра робототехники и автоматизации производственных систем
-\vspace{30ex}
-\\Пояснительная записка
-\\к курсовой работе
-\\по дисциплине «Информатика»
-\vspace{40ex}
-\\Санкт-Петербург
-\\2018
-\end{center}
 
-\newpage
+\begin{document}
 {\bfСодержание}
 \\1. Цель и тема курсовой работы
 \\2. Задание на курсовую работу
@@ -383,7 +378,7 @@ $h''(x)=-\sqrt3*sin(x)-cos(x)+4*cos(2*x + \frac{\pi}{3})$
 
 4) Вертикальные и горизонтальные асимптоты отсутствуют.
 
-5) функция я вляется общей направленности.
+5) функция является общей направленности.
 
 6) Имеет глобальный максимум в точке $x=0$
 
@@ -399,7 +394,7 @@ $h''(x)=-\sqrt3*sin(x)-cos(x)+4*cos(2*x + \frac{\pi}{3})$
       $ {\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,}$3. Представить графическое изображение результатов интерполяции исходных данных$ $.\\
 
       $\vec{V}_x=\left(\begin{array}{c}0\\0.5\\1.4\\2.25\\3.5\end{array}\right),
-      \,\,\,\vec{V}_y=\left(\begin{array}{c}3.0\\2.7\\3.7\\3.333\\3.667\end{array}\right)$ \\\\
+      \,\,\,\vec{V}_y=\left(\begin{array}{c}3\\2.7\\3.7\\3.333\\3.667\end{array}\right)$ \\\\
       $ {\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,}$Необходимо оценить погрешность в точке $ {x = 2.4}. $\,\,\,\,\,Вычислить значение функции в точке $\,{x = 1.2}.$\\
 \newpage
       \subsubsection{Теория и вывод уравнения сплайна}
@@ -521,7 +516,7 @@ $h''(x)=-\sqrt3*sin(x)-cos(x)+4*cos(2*x + \frac{\pi}{3})$
       	
       	\centering{\normalsize Коэффициенты $A_{ij}:$}\\
       	
-      $$\centering{\normalsize
+      $${\centering{\normalsize
       	\begin{vmatrix}
       \large A_{10}\\A_{11}\\ A_{12}\\ A_{13}\\
       A_{20}\\A_{21}\\A_{22}\\A_{23}\\
@@ -530,28 +525,62 @@ $h''(x)=-\sqrt3*sin(x)-cos(x)+4*cos(2*x + \frac{\pi}{3})$
       \end{vmatrix}
       \centering{\large =}
        \begin{vmatrix}
-       3\\-1.458\\ 0\\ 3.43\\
-       4.43\\-8.49\\12.53\\-4.9\\
-       -10.8\\36.23\\-19.4\\2.7\\
-       20.65\\-5.7\\-0.735\\-0.07
-       \end{vmatrix}}$$
+       3\\-1.0237\\ 0\\ 1.6949\\
+       3.4317\\-3.6139\\5.1803\\-1.7586\\
+       -4.7853\\13.9939\\-7.3967\\1.2359\\
+       12.1651\\-8.6065\\2.6479\\-0.2522\\
+       \end{vmatrix}$$
        \newpage
 
-       {\left \normalsize $Уравнение сплайна имеет вид:$}\\[10pt]
+       {\left \normalsize \bf$Уравнение сплайна имеет вид:$}\\
      {\normalsize ${F(x)}$= \left\{
       	\begin{aligned}
-      	F_1(x)&=3.0x^3-1.46x^2+0.0x+3.43,\,\, $где$ \,\,\,{x}\in\,\,\, {$[0,\,0.5]$}};\\
-      F_2(x)&=4.43x^3-8.49x^2+12.53x-4.9,\,\, $где$ \,\,\,{x}\in\,\,\, {$[0.5,\,1.4]$}};\\
-    F_3(x)&=-10.8x^3-36.23x^2-19.4x+2.7,\,\, $где$ \,\,\,{x}\in\,\,\, {$[1.4,\,2.25]$}};\\
-F_4(x)&=20.65x^3-5.7x^2-0.735x-0.07,\,\, $где$ \,\,\,{x}\in\,\,\, {$[2.25,\,3.5]$}}\\
+      	F_1(x)&=1.69x^3+0.0x^2-1.0237x+3,\,\, $где$ \,\,\,{x}\in\,\, {$[0,\,0.5]$}};\\
+      F_2(x)&=-1.7586x^3+5.1803x^2-3.6139x+3.4317,\,\, $где$ \,\,\,{x}\in\, {$[0.5,\,1.4]$}};\\
+    F_3(x)&=1.2359x^3-7.3967x^2+13.9939x_4.7853,\,\, $где$ \,\,\,{x}\in\, {$[1.4,\,2.25]$}};\\
+F_4(x)&=-0.2522x^3+2.6479x^2-8.6065x+12.1651,\,\, $где$ \,\,\,{x}\in\,{$[2.25,\,3.5]$}}\\
       	\end{aligned}
-\newpage    	
-{\bfГрафик полиномов из которых состоит сплайн средствами TEX}\\      	
+ 
+\vspace{20mm}
+{\bfГрафик средствами TEX:}\\   
+\vspace{20mm}
+\begin{tikzpicture}
+\begin{scope}[scale=2.8]
+
+\draw[thin, ->] (0,0) -- (5,0) node[right] {$X$};
+\draw[thin, ->] (0,0) -- (0,5) node[left] {$Y$};
+\draw[very thin,color=gray] (0,0) grid[xstep=0.3,ystep=0.3] (4,4);
+\foreach \x\xtext in {0.5,1,1.4,2.25,3,3.5} 
+\draw (\x,0.1) -- (\x,-0.1) node[below] {$\xtext$};
+\foreach \y\ytext in {0,2,1,3,4} 
+\draw (0.1,\y) -- (-0.1,\y) node[left] {$\ytext$};
+\draw[domain=0:0.5, smooth] plot ({\x},{(1.6949*(\x)*(\x)*(\x))+0+(-1.0237*(\x))+3});
+\draw[domain=0.5:1.4, smooth] plot ({\x},{(-1.7586*(\x)*(\x)*(\x))+(5.1803*(\x)*(\x))+(-3.6139*(\x))+3.4317});
+\draw[domain=1.4:2.25, smooth] plot ({\x},{(1.2359*(\x)*(\x)*(\x))-(7.3967*(\x)*(\x))+(13.9939*(\x))-4.7853});
+\draw[domain=2.25:3.5, smooth] plot ({\x},{(-0.2522*(\x)*(\x)*(\x))+(2.6479*(\x)*(\x))-(8.6065*(\x))+12.1651});
+\draw (0,3) circle (0.8pt);
+\draw (0.5,2.7) circle (0.8pt);
+\draw (1.4,3.7) circle (0.8pt);
+\draw (2.25,3.333) circle (0.8pt);
+\draw (3.5,3.667) circle (0.8pt);
+\draw[thin,dashed] (0.5,2.7) -- (0.5,0);
+\draw[thin,dashed] (1.4,3.7)  -- (1.4,0) ;
+\draw[thin,dashed]  (2.25,3.333) --  (2.25,0);
+\draw[thin,dashed] (3.5,3.667) -- (3.5,0);
+
+\draw[thin]  (0,3) --  (0.5,2.7);
+\draw[thin]  (0.5,2.7) --  (1.4,3.7);
+\draw[thin]  (1.4,3.7) --  (2.25,3.333);
+\draw[thin]  (2.25,3.333) --  (3.5,3.667);
+
+\end{scope};
+\end{tikzpicture}
 
 
 
 \newpage      
-{\bfИнтерполяция встроенными методами.}\\
+\subsection{Интерполяция встроенными методами.}
+\begin{flushleft}
 В математическом пакете «SciLab» можно провести интерполяцию пользуясь парой команд:\\
 d = splin(x,y,”method”);\\
 is = interp(xx,x,y,d);\\
@@ -573,46 +602,76 @@ d=splin(x,y,”parameter”);\\
 is=interp(xx,x,y,d);\\
 plot(xx,is);\\
 plot(x,y,”red o”);\\
+\end{flushleft}
 
-\begin{figure}
-\begin{center}
-\begin{minipage}[h]{0.75\linewidth}
-\center{\includegraphics[width=1\linewidth]{10.PNG}}  \\
-\frametitle{Интерполянт, полученный с помощью splin(”natural”)}
-\center{\includegraphics[width=1\linewidth]{11.PNG}}  \\
-\frametitle{Интерполянт, полученный с помощью splin(”fast”)}
-\end{minipage}
-\end{center}
-\end{figure}
 
-\begin{figure}
-\begin{center}
-\begin{minipage}[h]{0.75\linewidth}
-\center{\includegraphics[width=1\linewidth]{12.PNG}}  \\
-\frametitle{Интерполянт, полученный с помощью splin(”monotone”)}
-\center{\includegraphics[width=1\linewidth]{13.PNG}}  \\
-\frametitle{Интерполянт, полученный с помощью splin(”clamped”) (2,3)}
-\end{minipage}
-\end{center}
-\end{figure}
 
-\begin{figure}
-\begin{center}
-\begin{minipage}[h]{0.75\linewidth}
-\center{\includegraphics[width=1\linewidth]{14.PNG}}  \\
-\frametitle{Интерполянт, полученный с помощью splin(”not$_$a$_$knot”) }
+\begin{figure}[H]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{10.PNG}} a) \\
 \end{minipage}
-\end{center}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{11.PNG}} \\b)
+\end{minipage}
+\vfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{12.PNG}} c) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{13.PNG}} d) \\
+\end{minipage}
+\caption{ a) Интерполянт, полученный с помощью ”natural”\\ b)
+Интерполянт, полученный с помощью ”fast”\\ c) Интерполянт, полученный с помощью ”monotone” \\d) Интерполянт, полученный с помощью ”clamped” (2,3)}
+\label{ris:experimentalcorrelationsignals}
 \end{figure}
 
 \newpage
+\begin{flushleft}
 \section{Задача оптимального распределения неоднородных ресурсов.}
 Требуется решить следующую задачу оптимального распределения неоднородных ресурсов. Пусть в распоряжении завода железобетонных изделий\\ (ЖБИ) имеется m видов сырья (песок, щебень, цемент) в объемах ${\bf a_i}$  .Требуется произвести продукцию {\bf n} видов. Дана технологическая норма $c_ij$  требления отдельного i-го вида сырь для изготовления единицы продукции каждого j-го вида. Известна прибыль $\pi_j$  получаема от выпуска единицы продукции j-го вида. Требуется определить, какую продукцию и в каком количестве должен производить завод ЖБИ, чтобы получить максимальную прибыль.\\
-Исходные данные:\\
-\begin{figure}
+{\bfИсходные данные:}\\
+\end{flushleft}
+\begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{2.PNG}}  \\
 \end{figure}
 
+\newpage
+\begin{flushleft}
+Листинг:\\
+C=[4,4,4,6;4,6,6,3;6,4,5,8];\\
+b=[14;12;35];\\
+ci=[0;0;0;0];\\
+cs=[];\\
+p=[40;55;35;25];\\
+[x,lagr,f]=linpro(-p,C,b,ci,cs);\\
+\end{flushleft}
+\begin{figure}[h]
+\center{\includegraphics[width=0.65\linewidth]{15.PNG}}  \\
+\end{figure}
+Максимальная прибыль в размере 120 д.е. будет получена, если объем производства продукции П1 составит 3 ед.
 
+\newpage
+\section{Вывод:}
+В ходе работы, были привиты базовые навыки использования математических пакетов, улучшена вёрстка в TEX`e. Иследованна функция, построен сплайн, решена экономическая задача.
+
+
+\newpage
+\begin{thebibliography}{9}
+\bibitem{book1} Scilab: Решение инженерных и математических задач / Е. Р. Алексеев,
+О. В. Чеснокова, Е. А. Рудченко. — М. : ALT Linux ; БИНОМ. Лаборатория
+знаний, 2008. — 260 с. : ил. ; 8 с. цв. вклейки.— (Библиотека ALT Linux).
+\bibitem{book2} Андриевский А.Б., Андриевский Б.Р., Капитонов А.А.,
+Фрадков А.Л. Решение инженерных задач в среде Scilab. Учебное
+пособие.— СПб.: НИУ ИТМО, 2013. — 97 с.
+\bibitem{book3}Решение задач оптимизации средствами Scilab и Excel : Методические
+указания к лабораторной работе по дисциплине «Математическая
+экономика» / Уфимск. гос. авиац. техн. ун-т; Сост.: Л.М. Бакусов,
+О.В. Кондратьева - Уфа, 2011. - 33 с.
+\bibitem{book4} https://ru.wikipedia.org/wiki/Интерполяционный\_многочлен\_Лагранжа
+\bibitem{book5}Калиткин. Численные методы. М.,Мир, 1980.
+\bibitem{book6}Ю.С. Завьялов. Методы сплайн-функций. М.Наука, 1980.
+\end{thebibliography}
 \end{document}
 
