@@ -1,24 +1,31 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[T2A]{fontenc}
-\usepackage[cp1251]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage{tikz}
+\usepackage{colortbl}
 \usepackage[european,cuteinductors,smartlabels]{circuitikz}
-\usepackage{cmap}
-\title{Практическая работа №4}
-\author{студент: Веренёв А.А.    группы 8871   }
+\usepackage{xcolor}
+\title{РџСЂР°РєС‚РёС‡РµСЃРєР°СЏ СЂР°Р±РѕС‚Р° в„–4}
+\author{Р’РµСЂРµРЅС‘РІ Рђ.Рђ.    РіСЂСѓРїРїР° 8871   }
 \begin{document}
-\section{Практическая работа №4}
-Изобразить молекулу метана графически, при условии, что угол поворота вокруг оси OZ состовляет  $\alpha=\frac{-Pi}{3}$, а вокруг OY $\beta=\frac{-2Pi}{3}$.
+\section{РџСЂР°РєС‚РёС‡РµСЃРєР°СЏ СЂР°Р±РѕС‚Р° в„–4}
+РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РІРѕРєСЂСѓРі РѕСЃРё OZ  $\alpha=\frac{-Pi}{3}$, Р° РІРѕРєСЂСѓРі OY $\beta=\frac{-2Pi}{3}$.
 
+\vspace{35mm}
+\begin{center}
 \begin{tikzpicture}
-\begin{scope}[xscale=2,yscale=2]
-\draw [rounded corners=4pt,color=white,ball color=green,smooth] (0,0) circle (0.6) node {$H_1$};
-\draw [rounded corners=4pt,color=white,ball color=gray,smooth] (0.4268,0.4155) circle (0.75) node {$C$};
-\draw [rounded corners=4pt,color=white,ball color=yellow,smooth] (-0.5,0.866) circle (0.6) node {$H_2$};
-\draw [rounded corners=4pt,color=white,ball color=purple,smooth] (1.25,1.299) circle (0.6) node {$H_3$};
-\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (0.9571,-0.5031) circle (0.6) node {$H_4$};
 
+\begin{scope}[xscale=1,yscale=1]
+\draw [rounded corners=4pt,color=white,ball color=green,smooth] (0,0,0) circle (1) node {$H_1$};
+\draw [rounded corners=4pt,color=white,ball color=gray,smooth] (-0.43,-1.73,-3.21) circle (1.6) node {$C$};
+\draw [rounded corners=4pt,color=white,ball color=yellow,smooth] (-1.5,-5.19,-2.59) circle (1) node {$H_2$};
+\draw [rounded corners=4pt,color=white,ball color=purple,smooth] (-3,0,-5.19) circle (1) node {$H_3$};
+\draw [rounded corners=4pt,color=white,ball color=blue,smooth] (2.74,-1.73,-5.04) circle (1) node {$H_4$};
 \end{scope};
 \end{tikzpicture};
+\end{center}
 \end{document} 
+
+
+
